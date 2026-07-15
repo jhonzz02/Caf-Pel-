@@ -19,22 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('overflow-hidden');
         }, 400);
 
-        // 3. Revelamos a Home Page e começamos as animações dos textos
+        // 3. Revelamos a Home Page e começamos as animações dos textos e do banner lateral
         setTimeout(() => {
-            // Esconde a div do splash da tela para não bugar cliques futuros
             splashScreen.style.pointerEvents = 'none'; 
-            
-            // Revela o fundo areia da home
             homeContent.classList.remove('opacity-0');
             
-            // Adiciona a classe "show" em cada elemento para eles subirem
+            // Revela os itens centrais (Igreja, Título, etc)
             animateItems.forEach(item => {
                 item.classList.add('show');
             });
+
+            // Revela o banner lateral da esquerda
+            const sideBanner = document.querySelector('.animate-slide-right');
+            if (sideBanner) {
+                sideBanner.classList.add('show');
+            }
             
-            // Removemos completamente do DOM após a transição terminar
             setTimeout(() => splashScreen.remove(), 1000); 
 
-        }, 800); // Começa um pouco antes das portas terminarem de abrir
+        }, 800);// Começa um pouco antes das portas terminarem de abrir
     });
 });

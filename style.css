@@ -25,3 +25,50 @@
 .animate-item:nth-child(2) { transition-delay: 0.4s; }
 .animate-item:nth-child(3) { transition-delay: 0.6s; }
 .animate-item:nth-child(4) { transition-delay: 0.8s; }
+
+/* Animação do banner lateral vindo da esquerda */
+.animate-slide-right {
+    opacity: 0;
+    /* Começa fora da tela à esquerda. Mantém o -50% no Y para continuar centralizado verticalmente */
+    transform: translate(-100px, -50%); 
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Quando o JS adicionar a classe "show" */
+.animate-slide-right.show {
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+/* Ajuste de delay para o banner entrar logo depois que a tela clarear */
+.animate-slide-right {
+    transition-delay: 0.3s;
+}
+
+/* Efeito de etiqueta vintage com cantos recortados */
+.clip-vintage {
+    clip-path: polygon(
+        15px 0%, calc(100% - 15px) 0%, 
+        100% 15px, 100% calc(100% - 15px), 
+        calc(100% - 15px) 100%, 15px 100%, 
+        0% calc(100% - 15px), 0% 15px
+    );
+}
+
+/* Animação da Esteira (Carrossel Infinito) */
+@keyframes scroll-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+.animate-marquee {
+  /* Ajuste o '40s' para deixar mais rápido ou mais lento */
+  animation: scroll-marquee 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Pausa a esteira quando o mouse passa por cima (Opcional) */
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
