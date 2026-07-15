@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Pelô | Brunch, Coffee & Bahia</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oliva: '#2A362B',    // Verde Oliva inspirado na imagem
+                        dourado: '#C5A880',  // Dourado
+                        areia: '#EADFCF',    // Areia
+                        offwhite: '#F5F2EC', // Off White
+                        fosco: '#1A1A1A'     // Preto Fosco
+                    },
+                    fontFamily: {
+                        // Fontes parecidas com a da marca
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-areia font-sans overflow-hidden">
+
+    <div id="splash-screen" class="fixed inset-0 z-50 flex items-center justify-center cursor-pointer">
+        <div id="splash-left" class="absolute left-0 top-0 w-1/2 h-full bg-oliva transition-transform duration-1000 ease-in-out"></div>
+        <div id="splash-right" class="absolute right-0 top-0 w-1/2 h-full bg-oliva transition-transform duration-1000 ease-in-out"></div>
+
+        <div id="splash-content" class="relative z-10 text-center flex flex-col items-center transition-opacity duration-500">
+            <h1 class="text-5xl md:text-7xl font-serif text-dourado mb-4 tracking-widest">CAFÉ PELÔ</h1>
+            <p class="text-offwhite text-sm md:text-base tracking-[0.3em] uppercase animate-pulse">Clique para começar</p>
+        </div>
+    </div>
+
+    <main id="home-content" class="relative z-10 min-h-screen opacity-0 transition-opacity duration-1000 ease-in flex flex-col items-center justify-center p-8">
+        
+        <div class="text-center">
+            <h2 class="animate-item text-3xl md:text-5xl font-serif text-fosco mb-2">European Brunch.</h2>
+            <h2 class="animate-item text-3xl md:text-5xl font-serif text-fosco mb-8">Bahian Soul.</h2>
+            <div class="animate-item w-24 h-[2px] bg-dourado mx-auto mb-8"></div>
+            <p class="animate-item text-fosco max-w-md mx-auto text-lg">
+                Bem-vindo ao Café Pelô. A essência de Salvador com o sabor de um café especial 100% brasileiro.
+            </p>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

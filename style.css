@@ -1,0 +1,27 @@
+/* Animação das metades do Splash se separando para as laterais */
+.split-left {
+    transform: translateX(-100%);
+}
+
+.split-right {
+    transform: translateX(100%);
+}
+
+/* Estado inicial dos itens da Home (Invisíveis e um pouco para baixo) */
+.animate-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Curva suave de aceleração */
+}
+
+/* Classe adicionada pelo JS para revelar os itens na tela principal */
+.animate-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Controlando os atrasos (delays) para cada item surgir um após o outro */
+.animate-item:nth-child(1) { transition-delay: 0.2s; }
+.animate-item:nth-child(2) { transition-delay: 0.4s; }
+.animate-item:nth-child(3) { transition-delay: 0.6s; }
+.animate-item:nth-child(4) { transition-delay: 0.8s; }
