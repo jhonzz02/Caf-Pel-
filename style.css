@@ -72,3 +72,31 @@
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* ANIMAÇÕES DE SCROLL (INTERSECTION OBSERVER)*/
+.scroll-anim {
+    opacity: 0;
+    transition: all 3s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+/* Animação: Vem da Esquerda para a Direita */
+.slide-in-left {
+    transform: translateX(-80px);
+}
+
+/* Animação: Vem da Direita para a Esquerda */
+.slide-in-right {
+    transform: translateX(80px);
+}
+
+/* Animação: Surge de baixo para cima (ideal para imagens) */
+.fade-in-up {
+    transform: translateY(60px);
+}
+
+/* Classe ativadora: O JavaScript adiciona essa classe quando o item aparece na tela */
+.scroll-anim.is-visible {
+    opacity: 1;
+    transform: translate(0);
+}

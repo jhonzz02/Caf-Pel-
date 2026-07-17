@@ -10,11 +10,11 @@
         theme: {
           extend: {
             colors: {
-              oliva: "#1B251A", 
-              dourado: "#C5A880", 
-              areia: "#EADFCF", 
-              offwhite: "#F5F2EC", 
-              fosco: "#1A1A1A", 
+              oliva: "#1B251A",
+              dourado: "#C5A880",
+              areia: "#EADFCF",
+              offwhite: "#F5F2EC",
+              fosco: "#1A1A1A",
             },
             fontFamily: {
               serif: ['"Playfair Display"', "serif"],
@@ -30,9 +30,11 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  
-  <body class="bg-areia font-sans overflow-x-hidden text-oliva flex flex-col min-h-screen">
-    
+
+  <body
+    class="bg-areia font-sans overflow-hidden text-oliva flex flex-col min-h-screen"
+  >
+    <!-- splash screen -->
     <div
       id="splash-screen"
       class="fixed inset-0 z-50 flex items-center justify-center cursor-pointer"
@@ -50,187 +52,409 @@
         id="splash-content"
         class="relative z-10 text-center flex flex-col items-center transition-opacity duration-500"
       >
-        <h1 class="text-6xl md:text-8xl lg:text-[140px] font-serif text-dourado mb-4 tracking-widest">
+        <h1
+          class="text-6xl md:text-8xl lg:text-[140px] font-serif text-dourado mb-4 tracking-widest"
+        >
           CAFÉ PELÔ
         </h1>
-        <p class="text-offwhite text-sm md:text-base tracking-[0.3em] uppercase animate-pulse">
+        <p
+          class="text-offwhite text-sm md:text-base tracking-[0.3em] uppercase animate-pulse"
+        >
           Clique para começar
         </p>
       </div>
     </div>
 
-    <div id="home-content" class="opacity-0 transition-opacity duration-1000 ease-in flex flex-col flex-grow w-full">
-
-      <header class="w-full flex items-center justify-center pt-10 pb-6 md:pt-16 md:pb-8">
-        <div class="animate-item flex items-center justify-center gap-4 md:gap-6 text-dourado tracking-[0.3em] text-[10px] md:text-sm uppercase">
-          <span class="min-w-[100px] md:min-w-[150px] text-right">Salvador</span>
-          <img
-            src="igreja.png"
-            alt="Igreja Nosso Senhor do Bonfim / Pelourinho"
-            class="h-16 md:h-20 w-auto object-contain"
-          />
-          <span class="min-w-[100px] md:min-w-[150px] text-left">Bahia</span>
-        </div>
-      </header>
-
-      <div class="flex-grow w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)_300px] gap-8 px-4 pb-16">
-        
-        <div class="flex justify-center lg:justify-start items-start">
-          <aside class="clip-vintage bg-oliva text-dourado p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[150px] w-fit h-fit">
-            <h3 class="font-serif text-xs leading-[2] tracking-[0.2em] mt-2">
-              BRUNCH.<br /><br />BAHIAN<br />SOUL.
-            </h3>
-            <div class="my-6 w-8 h-[1px] bg-dourado/50"></div>
+    <div
+      id="home-content"
+      class="opacity-0 transition-opacity duration-1000 ease-in flex flex-col w-full"
+    >
+      <div class="min-h-screen flex flex-col justify-between w-full pb-8">
+        <header
+          class="w-full flex items-center justify-center pt-10 pb-6 md:pt-16 md:pb-8 shrink-0"
+        >
+          <div
+            class="animate-item flex items-center justify-center gap-4 md:gap-6 text-dourado tracking-[0.3em] text-[10px] md:text-sm uppercase"
+          >
+            <span class="min-w-[100px] md:min-w-[150px] text-right"
+              >Salvador</span
+            >
             <img
-              src="folha.png"
-              alt="Ramo de Café"
-              class="w-16 h-auto my-2 opacity-90"
+              src="igreja.png"
+              alt="Igreja Nosso Senhor do Bonfim / Pelourinho"
+              class="h-16 md:h-20 w-auto object-contain"
             />
-            <p class="font-serif text-xs tracking-[0.2em] mt-6 mb-6">
-              EST.<br />2024
-            </p>
-            <span class="text-2xl leading-none">✧</span>
-          </aside>
-        </div>
+            <span class="min-w-[100px] md:min-w-[150px] text-left">Bahia</span>
+          </div>
+        </header>
 
-        <main class="flex flex-col items-center justify-start w-full">
-          
-          <div class="flex flex-col items-center text-center w-full mb-12 lg:mb-16">
-            <h1 class="animate-item text-6xl md:text-8xl lg:text-[120px] xl:text-[140px] font-serif text-oliva mb-6 tracking-widest leading-none">
-              CAFÉ PELÔ
-            </h1>
-            
-            <div class="animate-item flex items-center justify-center w-full max-w-lg mx-auto mb-6 opacity-80">
-              <div class="flex-1 h-[1px] bg-dourado"></div>
-              <div class="text-dourado px-4 text-xl leading-none">❖</div>
-              <div class="flex-1 h-[1px] bg-dourado"></div>
-            </div>
-            
-            <div class="animate-item text-oliva tracking-[0.35em] text-xs md:text-sm font-medium uppercase">
-              Brunch
-              <span class="text-dourado mx-2 text-lg align-middle">+</span> Coffee
-              <span class="text-dourado mx-2 text-lg align-middle">+</span> Bahia
-            </div>
+        <div
+          class="flex-grow w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)_300px] gap-8 px-4 items-center"
+        >
+          <div class="flex justify-center lg:justify-start items-start">
+            <aside
+              class="clip-vintage bg-oliva text-dourado p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[150px] w-fit h-fit animate-slide-right"
+            >
+              <h3 class="font-serif text-xs leading-[2] tracking-[0.2em] mt-2">
+                BRUNCH.<br /><br />BAHIAN<br />SOUL.
+              </h3>
+              <div class="my-6 w-8 h-[1px] bg-dourado/50"></div>
+              <img
+                src="folha.png"
+                alt="Ramo de Café"
+                class="w-16 h-auto my-2 opacity-90"
+              />
+              <p class="font-serif text-xs tracking-[0.2em] mt-6 mb-6">
+                EST.<br />2024
+              </p>
+              <span class="text-2xl leading-none">✧</span>
+            </aside>
           </div>
 
-          <section class="w-full py-8 overflow-hidden bg-sand relative z-10 shrink-0 rounded-lg">
-            <div class="animate-marquee gap-6 px-3">
-              <div class="flex gap-6 items-center">
-                <img src="1.jpeg" alt="Foto Café 1" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="2.jpeg" alt="Foto Café 2" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="3.jpeg" alt="Foto Café 3" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="4.jpeg" alt="Foto Café 4" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="5.jpeg" alt="Foto Café 5" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="6.jpeg" alt="Foto Café 6" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+          <main class="flex flex-col items-center justify-center w-full">
+            <div class="flex flex-col items-center text-center w-full mb-8">
+              <h1
+                class="animate-item text-6xl md:text-8xl lg:text-[120px] xl:text-[140px] font-serif text-oliva mb-6 tracking-widest leading-none"
+              >
+                CAFÉ PELÔ
+              </h1>
+              <div
+                class="animate-item flex items-center justify-center w-full max-w-lg mx-auto mb-6 opacity-80"
+              >
+                <div class="flex-1 h-[1px] bg-dourado"></div>
+                <div class="text-dourado px-4 text-xl leading-none">❖</div>
+                <div class="flex-1 h-[1px] bg-dourado"></div>
               </div>
-
-              <div class="flex gap-6 items-center">
-                <img src="1.jpeg" alt="Foto Café 1" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="2.jpeg" alt="Foto Café 2" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="3.jpeg" alt="Foto Café 3" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="4.jpeg" alt="Foto Café 4" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="5.jpeg" alt="Foto Café 5" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
-                <img src="6.jpeg" alt="Foto Café 6" class="h-48 md:h-64 xl:h-80 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+              <div
+                class="animate-item text-oliva tracking-[0.35em] text-xs md:text-sm font-medium uppercase"
+              >
+                Brunch
+                <span class="text-dourado mx-2 text-lg align-middle">+</span>
+                Coffee
+                <span class="text-dourado mx-2 text-lg align-middle">+</span>
+                Bahia
               </div>
             </div>
-          </section>
 
-        </main>
+            <section
+              class="w-full py-4 overflow-hidden relative z-10 shrink-0 rounded-lg"
+            >
+              <div class="animate-marquee gap-6 px-3">
+                <div class="flex gap-6 items-center">
+                  <img
+                    src="1.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img
+                    src="2.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img
+                    src="3.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img
+                    src="4.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <div class="flex gap-6 items-center">
+                  <img
+                    src="1.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img
+                    src="2.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img
+                    src="3.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                  <img
+                    src="4.jpeg"
+                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              </div>
+            </section>
+          </main>
 
-        <div class="hidden lg:block w-full"></div>
-        
-      </div>
+          <div class="hidden lg:block w-full"></div>
+        </div>
 
-      <footer class="w-full flex flex-col gap-6 items-center justify-center py-8 px-4 text-center text-xs text-oliva opacity-90 shrink-0">
-        <div class="w-full max-w-7xl flex flex-wrap xl:flex-nowrap items-center justify-center gap-4 xl:gap-6">
-          
+        <div
+          class="w-full max-w-7xl mx-auto flex flex-wrap xl:flex-nowrap items-center justify-center gap-4 xl:gap-6 px-4 shrink-0"
+        >
           <div class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-              <path d="M12 2c-1.5 2-1.5 4 0 6M9 3c-1 2-1 3.5 0 5M15 3c1 2 1 3.5 0 5" />
+            <svg
+              class="w-6 h-6 text-oliva shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.3"
+            >
+              <path
+                d="M12 2c-1.5 2-1.5 4 0 6M9 3c-1 2-1 3.5 0 5M15 3c1 2 1 3.5 0 5"
+              />
               <path d="M7 10c0 5 2 9 5 9s5-4 5-9" />
               <path d="M4 21h16" />
             </svg>
             <div class="text-left leading-tight">
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">Café Especial</p>
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">100% Brasileiro</p>
+              <p
+                class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase"
+              >
+                Café Especial
+              </p>
             </div>
           </div>
-
           <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
 
           <div class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+            <svg
+              class="w-6 h-6 text-oliva shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.3"
+            >
               <path d="M3 15c0-5 4-9 9-9s9 4 9 9" />
               <path d="M2 15h20" />
               <path d="M6 15c0-3 2.5-5.5 6-5.5" />
             </svg>
             <div class="text-left leading-tight">
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">Brunch</p>
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">All Day</p>
+              <p
+                class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase"
+              >
+                Brunch All Day
+              </p>
             </div>
           </div>
-
           <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
 
           <div class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-              <path d="M12 22V10" />
-              <path d="M12 10c-4 0-7-3-7-7 4 0 7 3 7 7z" />
-              <path d="M12 13c4 0 7-3 7-7-4 0-7 3-7 7z" />
-            </svg>
-            <div class="text-left leading-tight">
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">Sabores</p>
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">da Bahia</p>
-            </div>
-          </div>
-
-          <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
-
-          <div class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+            <svg
+              class="w-6 h-6 text-oliva shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.3"
+            >
               <path d="M12 2l2 4h-4l2-4z" />
               <path d="M6 22V11M18 22V11M10 22V13M14 22V13" />
               <path d="M4 22h16" />
               <path d="M4 11h16" />
             </svg>
             <div class="text-left leading-tight">
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">Cultura</p>
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">e História</p>
+              <p
+                class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase"
+              >
+                Cultura & História
+              </p>
             </div>
           </div>
-
-          <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
-
-          <div class="flex items-center gap-3">
-            <svg class="w-6 h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
-              <path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 4.5 6.5 4c2 0 3.5 1 5.5 3 2-2 3.5-3 5.5-3 4 .5 5.5 4.5 4 8-2.5 4.5-9.5 9-9.5 9z" />
-            </svg>
-            <div class="text-left leading-tight">
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">Feito com</p>
-              <p class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase">Alma</p>
-            </div>
-          </div>
-
-          <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
-
-          <a href="https://instagram.com/cafepelo" target="_blank" class="flex items-center gap-2 hover:opacity-100 transition-opacity cursor-pointer">
-            <svg class="w-5 h-5 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span class="font-serif text-[11px] tracking-[0.2em] font-bold">@CAFEPELO</span>
-          </a>
-
         </div>
+      </div>
 
-        <div class="w-full tracking-[0.2em] opacity-80 pt-4 border-t border-oliva/10 max-w-4xl mx-auto mt-2">
+      <main class="w-full bg-offwhite py-24 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col gap-24 md:gap-32">
+          <section
+            class="flex flex-col md:flex-row items-center gap-10 md:gap-16"
+          >
+            <div class="w-full md:w-1/2 scroll-anim fade-in-up">
+              <img
+                src="espaco.jpg"
+                alt="O Espaço"
+                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-right"
+            >
+              <p
+                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
+              >
+                Ambiente
+              </p>
+              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+                O Espaço
+              </h2>
+              <p class="text-oliva/80 leading-relaxed font-light mb-6">
+                Um casarão restaurado que respira a história de Salvador.
+                Mesclamos o conforto contemporâneo com elementos rústicos e
+                originais da arquitetura baiana. Cada canto foi pensado para ser
+                um refúgio acolhedor em meio à vibração do Pelô.
+              </p>
+            </div>
+          </section>
+
+          <section
+            class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16"
+          >
+            <div
+              class="w-full md:w-1/2 scroll-anim fade-in-up"
+              style="transition-delay: 0.2s"
+            >
+              <img
+                src="regiao.jpg"
+                alt="A Região"
+                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-left"
+            >
+              <p
+                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
+              >
+                Localização
+              </p>
+              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+                A Região
+              </h2>
+              <p class="text-oliva/80 leading-relaxed font-light mb-6">
+                Situado no coração do centro histórico, o Café Pelô está rodeado
+                por cores, ritmos e ladeiras que contam a história do Brasil. Um
+                ponto de encontro estratégico para quem explora as ruas de pedra
+                e a magia do Pelourinho.
+              </p>
+            </div>
+          </section>
+
+          <section
+            class="flex flex-col md:flex-row items-center gap-10 md:gap-16"
+          >
+            <div class="w-full md:w-1/2 scroll-anim fade-in-up">
+              <img
+                src="turismo.jpg"
+                alt="Turismo"
+                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-right"
+            >
+              <p
+                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
+              >
+                Atração
+              </p>
+              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+                O Turismo
+              </h2>
+              <p class="text-oliva/80 leading-relaxed font-light mb-6">
+                Salvador atrai milhões de visitantes anualmente em busca de
+                autenticidade. Nosso cardápio oferece aos turistas a experiência
+                do verdadeiro café especial aliado a releituras de clássicos da
+                culinária regional, elevando a experiência turística.
+              </p>
+            </div>
+          </section>
+
+          <section
+            class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16"
+          >
+            <div
+              class="w-full md:w-1/2 scroll-anim fade-in-up"
+              style="transition-delay: 0.2s"
+            >
+              <img
+                src="consumo.jpg"
+                alt="Potencial de Consumo"
+                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
+              />
+            </div>
+            <div
+              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-left"
+            >
+              <p
+                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
+              >
+                Mercado
+              </p>
+              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+                Potencial de Consumo
+              </h2>
+              <p class="text-oliva/80 leading-relaxed font-light mb-6">
+                Com um fluxo constante de pessoas e a carência de opções que
+                unam café de alta qualidade e infraestrutura premium na região,
+                o Café Pelô se posiciona para capturar tanto o turista disposto
+                a gastar em experiências, quanto o soteropolitano em busca de um
+                bom brunch.
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <section
+        class="w-full bg-oliva py-24 px-6 text-center text-offwhite border-t-4 border-dourado"
+      >
+        <div class="max-w-6xl mx-auto">
+          <p
+            class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-4"
+          >
+            Investimento & Retorno
+          </p>
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-16"
+          >
+            KPIs do Projeto
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">R$ 65</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
+                >Ticket Médio Est.</span
+              >
+            </div>
+
+            <div
+              class="flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">150</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
+                >Clientes / Dia</span
+              >
+            </div>
+
+            <div
+              class="flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">22%</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
+                >Margem de Lucro</span
+              >
+            </div>
+
+            <div
+              class="flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">18 M</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
+                >Payback (Meses)</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer
+        class="w-full flex flex-col gap-6 items-center justify-center py-8 px-4 text-center text-xs text-oliva bg-areia"
+      >
+        <div class="w-full tracking-[0.2em] opacity-80 pt-4 max-w-4xl mx-auto">
           © 2026 CAFÉ PELÔ. Todos os direitos reservados.
         </div>
       </footer>
-      
     </div>
-    
+
     <script src="script.js"></script>
   </body>
 </html>
