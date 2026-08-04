@@ -69,69 +69,71 @@
       id="home-content"
       class="opacity-0 transition-opacity duration-1000 ease-in flex flex-col w-full"
     >
-      <div class="min-h-screen flex flex-col justify-between w-full pb-8">
+   <div class="min-h-screen flex flex-col justify-between w-full pb-8 overflow-hidden">
         <header
-          class="w-full flex items-center justify-center pt-10 pb-6 md:pt-16 md:pb-8 shrink-0"
+          class="w-full flex items-center justify-center pt-8 pb-4 md:pt-16 md:pb-8 shrink-0 px-4"
         >
           <div
-            class="animate-item flex items-center justify-center gap-4 md:gap-6 text-dourado tracking-[0.3em] text-[10px] md:text-sm uppercase"
+            class="animate-item flex items-center justify-center gap-2 sm:gap-4 md:gap-6 text-dourado tracking-[0.3em] text-[10px] md:text-sm uppercase w-full"
           >
-            <span class="min-w-[100px] md:min-w-[150px] text-right"
+            <span class="w-[80px] sm:min-w-[100px] md:min-w-[150px] text-right truncate"
               >Salvador</span
             >
             <img
               src="igreja.png"
               alt="Igreja Nosso Senhor do Bonfim / Pelourinho"
-              class="h-16 md:h-20 w-auto object-contain"
+              class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0"
             />
-            <span class="min-w-[100px] md:min-w-[150px] text-left">Bahia</span>
+            <span class="w-[80px] sm:min-w-[100px] md:min-w-[150px] text-left truncate"
+              >Bahia</span
+            >
           </div>
         </header>
 
         <div
-          class="flex-grow w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)_300px] gap-8 px-4 items-center"
+          class="flex-grow w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)_250px] xl:grid-cols-[300px_minmax(0,1fr)_300px] gap-8 md:gap-12 px-4 items-center py-6"
         >
-          <div class="flex justify-center lg:justify-start items-start">
+        <div class="hidden lg:flex justify-start items-start order-1">
             <aside
-              class="clip-vintage bg-oliva text-dourado p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[150px] w-fit h-fit animate-slide-right"
+              class="clip-vintage bg-oliva text-dourado p-5 md:p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[140px] md:min-w-[150px] w-fit h-fit animate-slide-right"
             >
-              <h3 class="font-serif text-xs leading-[2] tracking-[0.2em] mt-2">
+              <h3 class="font-serif text-[10px] md:text-xs leading-[2] tracking-[0.2em] mt-2">
                 BRUNCH.<br /><br />BAHIAN<br />SOUL.
               </h3>
-              <div class="my-6 w-8 h-[1px] bg-dourado/50"></div>
+              <div class="my-5 md:my-6 w-8 h-[1px] bg-dourado/50"></div>
               <img
                 src="folha.png"
                 alt="Ramo de Café"
-                class="w-16 h-auto my-2 opacity-90"
+                class="w-12 md:w-16 h-auto my-2 opacity-90"
               />
-              <p class="font-serif text-xs tracking-[0.2em] mt-6 mb-6">
+              <p class="font-serif text-[10px] md:text-xs tracking-[0.2em] mt-5 mb-5 md:mt-6 md:mb-6">
                 EST.<br />2024
               </p>
-              <span class="text-2xl leading-none">✧</span>
+              <span class="text-xl md:text-2xl leading-none">✧</span>
             </aside>
           </div>
 
-          <main class="flex flex-col items-center justify-center w-full">
-            <div class="flex flex-col items-center text-center w-full mb-8">
+          <main class="flex flex-col items-center justify-center w-full order-1 lg:order-2">
+            <div class="flex flex-col items-center text-center w-full mb-6 md:mb-8">
               <h1
-                class="animate-item text-6xl md:text-8xl lg:text-[120px] xl:text-[140px] font-serif text-oliva mb-6 tracking-widest leading-none"
+                class="animate-item text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[140px] font-serif text-oliva mb-4 md:mb-6 tracking-widest leading-none whitespace-nowrap"
               >
                 CAFÉ PELÔ
               </h1>
               <div
-                class="animate-item flex items-center justify-center w-full max-w-lg mx-auto mb-6 opacity-80"
+                class="animate-item flex items-center justify-center w-full max-w-lg mx-auto mb-4 md:mb-6 opacity-80"
               >
                 <div class="flex-1 h-[1px] bg-dourado"></div>
-                <div class="text-dourado px-4 text-xl leading-none">❖</div>
+                <div class="text-dourado px-4 text-lg md:text-xl leading-none">❖</div>
                 <div class="flex-1 h-[1px] bg-dourado"></div>
               </div>
               <div
-                class="animate-item text-oliva tracking-[0.35em] text-xs md:text-sm font-medium uppercase"
+                class="animate-item text-oliva tracking-[0.25em] md:tracking-[0.35em] text-[10px] sm:text-xs md:text-sm font-medium uppercase"
               >
                 Brunch
-                <span class="text-dourado mx-2 text-lg align-middle">+</span>
+                <span class="text-dourado mx-1 md:mx-2 text-base md:text-lg align-middle">+</span>
                 Coffee
-                <span class="text-dourado mx-2 text-lg align-middle">+</span>
+                <span class="text-dourado mx-1 md:mx-2 text-base md:text-lg align-middle">+</span>
                 Bahia
               </div>
             </div>
@@ -139,56 +141,48 @@
             <section
               class="w-full py-4 overflow-hidden relative z-10 shrink-0 rounded-lg"
             >
-              <div class="animate-marquee gap-6 px-3">
-                <div class="flex gap-6 items-center">
+              <div class="animate-marquee gap-4 md:gap-6 px-3 flex">
+                <div class="flex gap-4 md:gap-6 items-center shrink-0">
                   <img
                     src="1.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
                   />
                   <img
                     src="2.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
                   />
                   <img
                     src="3.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
                   />
-      <!--             <img
-                    src="4.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  /> -->
                 </div>
-                <div class="flex gap-6 items-center">
+                <div class="flex gap-4 md:gap-6 items-center shrink-0">
                   <img
                     src="1.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
                   />
                   <img
                     src="2.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
                   />
                   <img
                     src="3.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
+                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
                   />
-<!--                   <img
-                    src="4.jpeg"
-                    class="h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  /> -->
                 </div>
               </div>
             </section>
           </main>
 
-          <div class="hidden lg:block w-full"></div>
+          <div class="hidden lg:block w-full order-3"></div>
         </div>
 
         <div
-          class="w-full max-w-7xl mx-auto flex flex-wrap xl:flex-nowrap items-center justify-center gap-4 xl:gap-6 px-4 shrink-0"
+          class="w-full max-w-7xl mx-auto flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-6 gap-x-4 xl:gap-6 px-4 shrink-0 mt-4 md:mt-0"
         >
           <div class="flex items-center gap-3">
             <svg
-              class="w-6 h-6 text-oliva shrink-0"
+              class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -202,17 +196,17 @@
             </svg>
             <div class="text-left leading-tight">
               <p
-                class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase"
+                class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
               >
                 Café Especial
               </p>
             </div>
           </div>
-          <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
+          <div class="hidden sm:block w-px h-6 bg-oliva/20"></div>
 
           <div class="flex items-center gap-3">
             <svg
-              class="w-6 h-6 text-oliva shrink-0"
+              class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -224,7 +218,7 @@
             </svg>
             <div class="text-left leading-tight">
               <p
-                class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase"
+                class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
               >
                 Brunch All Day
               </p>
@@ -234,7 +228,7 @@
 
           <div class="flex items-center gap-3">
             <svg
-              class="w-6 h-6 text-oliva shrink-0"
+              class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -247,7 +241,7 @@
             </svg>
             <div class="text-left leading-tight">
               <p
-                class="font-serif text-[10px] tracking-[0.15em] text-oliva uppercase"
+                class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
               >
                 Cultura & História
               </p>
@@ -388,197 +382,309 @@
       </main>
 
       <!-- investimento -->
-       <section
-  class="w-full bg-oliva py-24 px-6 text-center text-offwhite border-t-4 border-dourado flex flex-col gap-20 overflow-hidden"
->
-  <div class="max-w-6xl mx-auto w-full">
-    <div class="scroll-anim fade-in-up">
-      <p
-        class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-4"
+   <section
+        class="w-full bg-oliva py-16 md:py-24 px-4 md:px-6 text-center text-offwhite border-t-4 border-dourado flex flex-col gap-16 md:gap-20 overflow-hidden"
       >
-        Investimento & Retorno
-      </p>
-      <h2
-        class="text-4xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-16"
-      >
-        KPIs do Projeto
-      </h2>
-    </div>
+        <div class="max-w-6xl mx-auto w-full">
+          <div class="scroll-anim fade-in-up">
+            <p
+              class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-4"
+            >
+              Investimento & Retorno
+            </p>
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-16"
+            >
+              KPIs do Projeto
+            </h2>
+          </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
-      <div
-        class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-      >
-        <span class="text-4xl font-serif text-dourado mb-3">R$ 65</span>
-        <span
-          class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
-          >Ticket Médio Est.</span
-        >
-      </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24"
+          >
+            <div
+              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">R$ 67,14</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
+                >Ticket Médio Est.</span
+              >
+            </div>
 
-      <div
-        class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-        style="transition-delay: 0.2s"
-      >
-        <span class="text-4xl font-serif text-dourado mb-3">150</span>
-        <span
-          class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
-          >Clientes / Dia</span
-        >
-      </div>
+            <div
+              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+              style="transition-delay: 0.2s"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">44</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
+                >Clientes / Dia</span
+              >
+            </div>
 
-      <div
-        class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-        style="transition-delay: 0.4s"
-      >
-        <span class="text-4xl font-serif text-dourado mb-3">22%</span>
-        <span
-          class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
-          >Margem de Lucro</span
-        >
-      </div>
+            <div
+              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+              style="transition-delay: 0.4s"
+            >
+              <span class="text-3xl font-serif text-dourado mb-3">28-32%</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
+                >CMV Target</span
+              >
+            </div>
 
-      <div
-        class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-        style="transition-delay: 0.6s"
-      >
-        <span class="text-4xl font-serif text-dourado mb-3">18 M</span>
-        <span
-          class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70"
-          >Payback (Meses)</span
-        >
-      </div>
-    </div>
+            <div
+              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+              style="transition-delay: 0.6s"
+            >
+              <span class="text-4xl font-serif text-dourado mb-3">39 M</span>
+              <span
+                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
+                >Payback (Meses)</span
+              >
+            </div>
+          </div>
 
-    <div class="scroll-anim slide-in-left text-left mb-24">
-      <h3 class="font-serif text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider text-sm font-bold">
-        ❖ Demonstrativo de Receita Projetada (3 Anos)
-      </h3>
-      <p class="text-offwhite/70 text-sm font-light mb-6">
-        Projeção financeira baseada na curva de maturação do tráfego turístico e corporativo do Pelourinho, considerando os ajustes inflacionários e estratégias de upsell no cardápio de restobar.
-      </p>
-      <div class="overflow-x-auto border border-dourado/20 rounded-sm bg-white/5">
-        <table class="w-full text-left font-sans text-sm border-collapse">
-          <thead>
-            <tr class="border-b border-dourado/20 bg-white/5 text-dourado uppercase tracking-widest text-[11px]">
-              <th class="p-4">Categoria / Métrica</th>
-              <th class="p-4">Ano 1 (Abertura)</th>
-              <th class="p-4">Ano 2 (Tração)</th>
-              <th class="p-4">Ano 3 (Maturidade)</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-dourado/10 text-offwhite/90 font-light">
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-4 font-normal text-offwhite">Média de Clientes / Dia</td>
-              <td class="p-4">90</td>
-              <td class="p-4">120</td>
-              <td class="p-4 font-semibold text-dourado">150</td>
-            </tr>
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-4 font-normal text-offwhite">Volume Anual de Clientes</td>
-              <td class="p-4">32.400</td>
-              <td class="p-4">43.200</td>
-              <td class="p-4">54.000</td>
-            </tr>
-            <tr class="hover:bg-white/5 transition-colors">
-              <td class="p-4 font-normal text-offwhite">Ticket Médio Estimado</td>
-              <td class="p-4">R$ 65,00</td>
-              <td class="p-4">R$ 70,00</td>
-              <td class="p-4">R$ 75,00</td>
-            </tr>
-            <tr class="bg-white/5 font-normal text-offwhite">
-              <td class="p-4 font-medium text-dourado">Faturamento Bruto Total</td>
-              <td class="p-4">R$ 2.106.000</td>
-              <td class="p-4">R$ 3.024.000</td>
-              <td class="p-4 text-dourado font-bold">R$ 4.050.000</td>
-            </tr>
-            <tr class="bg-dourado/5 text-offwhite">
-              <td class="p-4 font-medium text-dourado">Lucro Líquido (Margem %)</td>
-              <td class="p-4">R$ 315.900 (15%)</td>
-              <td class="p-4">R$ 604.800 (20%)</td>
-              <td class="p-4 text-dourado font-bold">R$ 891.000 (22%)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+          <div class="scroll-anim slide-in-left text-left mb-24">
+            <h3
+              class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold"
+            >
+              ❖ Demonstrativo de Receita Projetada (5 Anos)
+            </h3>
+            <p class="text-offwhite/70 text-sm font-light mb-6">
+              Projeção financeira baseada na curva de maturação do tráfego
+              turístico e corporativo do Pelourinho, considerando os ajustes
+              inflacionários e estratégias de upsell no cardápio de restobar.
+            </p>
+            <div
+              class="overflow-x-auto border border-dourado/20 rounded-sm bg-white/5 w-full"
+            >
+              <table class="w-full text-left font-sans text-sm border-collapse min-w-max">
+                <thead>
+                  <tr
+                    class="border-b border-dourado/20 bg-white/5 text-dourado uppercase tracking-widest text-[11px] whitespace-nowrap"
+                  >
+                    <th class="p-4">Categoria / Métrica</th>
+                    <th class="p-4">Ano 1</th>
+                    <th class="p-4">Ano 2</th>
+                    <th class="p-4">Ano 3</th>
+                    <th class="p-4">Ano 4</th>
+                    <th class="p-4">Ano 5</th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="divide-y divide-dourado/10 text-offwhite/90 font-light whitespace-nowrap"
+                >
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="p-4 font-normal text-offwhite">Média de Cliente / Dia</td>
+                    <td class="p-4">44</td>
+                    <td class="p-4">68</td>
+                    <td class="p-4">102</td>
+                    <td class="p-4">116</td>
+                    <td class="p-4 font-semibold text-dourado">128</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="p-4 font-normal text-offwhite">Média de Cliente / Mês</td>
+                    <td class="p-4">1.333</td>
+                    <td class="p-4">2.032</td>
+                    <td class="p-4">3.062</td>
+                    <td class="p-4">3.476</td>
+                    <td class="p-4">3.833</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="p-4 font-normal text-offwhite">Volume Anual de Cliente</td>
+                    <td class="p-4">11.997</td>
+                    <td class="p-4">24.384</td>
+                    <td class="p-4">36.747</td>
+                    <td class="p-4">41.717</td>
+                    <td class="p-4">45.993</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="p-4 font-normal text-offwhite">Ticket Médio Estimado</td>
+                    <td class="p-4">R$ 67,14</td>
+                    <td class="p-4">R$ 70,50</td>
+                    <td class="p-4">R$ 74,03</td>
+                    <td class="p-4">R$ 77,73</td>
+                    <td class="p-4">R$ 81,61</td>
+                  </tr>
+                  <tr class="bg-white/5 font-normal text-offwhite">
+                    <td class="p-4 font-medium text-dourado">Faturamento</td>
+                    <td class="p-4">R$ 561.817,44</td>
+                    <td class="p-4">R$ 1.719.041,04</td>
+                    <td class="p-4">R$ 2.720.183,23</td>
+                    <td class="p-4">R$ 3.242.531,48</td>
+                    <td class="p-4 text-dourado font-bold">R$ 3.753.635,51</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="p-4 font-medium text-dourado">Lucro Líquido</td>
+                    <td class="p-4 text-red-400 font-medium">-R$ 244.474,41</td>
+                    <td class="p-4">R$ 104.525,91</td>
+                    <td class="p-4">R$ 556.851,08</td>
+                    <td class="p-4">R$ 794.589,96</td>
+                    <td class="p-4 text-dourado font-bold">R$ 1.072.293,44</td>
+                  </tr>
+                  <tr class="bg-dourado/5 text-offwhite">
+                    <td class="p-4 font-medium text-dourado">Margem Líquida (%)</td>
+                    <td class="p-4">-</td>
+                    <td class="p-4">6%</td>
+                    <td class="p-4">20%</td>
+                    <td class="p-4">25%</td>
+                    <td class="p-4 text-dourado font-bold">29%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-    <div class="scroll-anim slide-in-right text-left mb-24">
-      <h3 class="font-serif text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider text-sm font-bold">
-        ❖ Usos & Fontes (Alocação do Capital Inicial)
-      </h3>
-      <p class="text-offwhite/70 text-sm font-light mb-8">
-        Distribuição do aporte para viabilização e abertura da unidade física. O foco principal reside na adequação estrutural e arquitetônica do casarão histórico ("Bahian Soul").
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-        <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center">
-          <span class="text-2xl font-serif text-dourado block mb-1">40%</span>
-          <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Obra e Restauro</span>
-          <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
-            <div class="bg-dourado h-full w-[40%]"></div>
+          <div class="scroll-anim slide-in-right text-left mb-24">
+            <h3
+              class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold"
+            >
+              ❖ Usos & Fontes (Alocação do Capital Inicial)
+            </h3>
+            <p class="text-offwhite/70 text-sm font-light mb-8">
+              Distribuição do aporte para viabilização e abertura da unidade
+              física. O foco principal reside na adequação estrutural e
+              arquitetônica do casarão histórico ("Bahian Soul").
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div
+                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span class="text-2xl font-serif text-dourado block mb-1">32%</span>
+                  <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Obras e Restauro</span>
+                </div>
+                <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                  <div class="bg-dourado h-full w-[32%]"></div>
+                </div>
+              </div>
+              
+              <div
+                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span class="text-2xl font-serif text-dourado block mb-1">19%</span>
+                  <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Equipamentos</span>
+                </div>
+                <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                  <div class="bg-dourado h-full w-[19%]"></div>
+                </div>
+              </div>
+              
+              <div
+                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span class="text-2xl font-serif text-dourado block mb-1">14%</span>
+                  <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Móveis & Decor</span>
+                </div>
+                <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                  <div class="bg-dourado h-full w-[14%]"></div>
+                </div>
+              </div>
+              
+              <div
+                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span class="text-2xl font-serif text-dourado block mb-1">26%</span>
+                  <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Capital de Giro</span>
+                </div>
+                <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                  <div class="bg-dourado h-full w-[26%]"></div>
+                </div>
+              </div>
+              
+              <div
+                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span class="text-2xl font-serif text-dourado block mb-1">6%</span>
+                  <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Marketing & Mídia</span>
+                </div>
+                <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                  <div class="bg-dourado h-full w-[6%]"></div>
+                </div>
+              </div>
+
+              <div
+                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
+              >
+                <div>
+                  <span class="text-2xl font-serif text-dourado block mb-1">3%</span>
+                  <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Outros</span>
+                </div>
+                <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                  <div class="bg-dourado h-full w-[3%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-anim slide-in-left text-left">
+            <h3
+              class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold"
+            >
+              ❖ Rodada de Captação & Valuation
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+              <div
+                class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center"
+              >
+                <span
+                  class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2"
+                  >Oferta (ASK)</span
+                >
+                <span class="text-3xl font-serif text-offwhite font-semibold"
+                  >R$ 786.000</span
+                >
+                <p class="text-xs text-offwhite/60 mt-3 font-light">
+                  Destinado integralmente ao plano de expansão física e
+                  abertura.
+                </p>
+              </div>
+              <div
+                class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center"
+              >
+                <span
+                  class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2"
+                  >Equity Disponibilizado</span
+                >
+                <span class="text-3xl font-serif text-offwhite font-semibold"
+                  >50%</span
+                >
+                <p class="text-xs text-offwhite/60 mt-3 font-light">
+                  Participação societária corporativa direta na operação do
+                  restobar.
+                </p>
+              </div>
+              <div
+                class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center"
+              >
+                <span
+                  class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2"
+                  >Valuation Post-Money</span
+                >
+                <span class="text-3xl font-serif text-dourado font-bold"
+                  >R$ 2.709.675</span
+                >
+                <p class="text-xs text-offwhite/60 mt-3 font-light">
+                  Calculado com base no Payback estimado de 39 meses do negócio.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center">
-          <span class="text-2xl font-serif text-dourado block mb-1">25%</span>
-          <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Equipamentos</span>
-          <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
-            <div class="bg-dourado h-full w-[25%]"></div>
-          </div>
-        </div>
-        <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center">
-          <span class="text-2xl font-serif text-dourado block mb-1">15%</span>
-          <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Móveis & Decor</span>
-          <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
-            <div class="bg-dourado h-full w-[15%]"></div>
-          </div>
-        </div>
-        <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center">
-          <span class="text-2xl font-serif text-dourado block mb-1">12%</span>
-          <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Capital de Giro</span>
-          <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
-            <div class="bg-dourado h-full w-[12%]"></div>
-          </div>
-        </div>
-        <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center">
-          <span class="text-2xl font-serif text-dourado block mb-1">8%</span>
-          <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Marketing & Mídia</span>
-          <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
-            <div class="bg-dourado h-full w-[8%]"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="scroll-anim slide-in-left text-left">
-      <h3 class="font-serif text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider text-sm font-bold">
-        ❖ Rodada de Captação & Valuation
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        <div class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors">
-          <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2">Oferta (ASK)</span>
-          <span class="text-3xl font-serif text-offwhite font-semibold">R$ 850.000</span>
-          <p class="text-xs text-offwhite/60 mt-3 font-light">Destinado integralmente ao plano de expansão física e abertura.</p>
-        </div>
-        <div class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors">
-          <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2">Equity Disponibilizado</span>
-          <span class="text-3xl font-serif text-offwhite font-semibold">20%</span>
-          <p class="text-xs text-offwhite/60 mt-3 font-light">Participação societária corporativa direta na operação do restobar.</p>
-        </div>
-        <div class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors">
-          <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2">Valuation Post-Money</span>
-          <span class="text-3xl font-serif text-dourado font-bold">R$ 4.250.000</span>
-          <p class="text-xs text-offwhite/60 mt-3 font-light">Calculado com base no Payback atrativo de 18 meses do negócio.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+      </section>
 
       <footer
-        class="w-full flex flex-col gap-6 items-center justify-center py-8 px-4 text-center text-xs text-oliva bg-areia"
+        class="w-full flex flex-col items-center justify-center py-6 sm:py-8 px-4 text-center bg-areia"
       >
-        <div class="w-full tracking-[0.2em] opacity-80 pt-4 max-w-4xl mx-auto">
+        <div
+          class="w-full max-w-4xl mx-auto text-[11px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] leading-relaxed text-oliva opacity-80"
+        >
           © 2026 CAFÉ PELÔ. Todos os direitos reservados.
         </div>
       </footer>
