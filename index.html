@@ -1,784 +1,595 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Café Pelô | Brunch, Coffee & Bahia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              oliva: "#1B251A",
-              dourado: "#C5A880",
-              areia: "#EADFCF",
-              offwhite: "#F5F2EC",
-              fosco: "#1A1A1A",
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', "serif"],
-              sans: ['"Lato"', "sans-serif"],
-            },
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Pelô | Brunch, Coffee & Sunset</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            oliva: "#1B251A",
+            dourado: "#C5A880",
+            areia: "#EADFCF",
+            offwhite: "#F5F2EC",
+            fosco: "#1A1A1A",
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', "serif"],
+            sans: ['"Lato"', "sans-serif"],
           },
         },
-      };
-    </script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+      },
+    };
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <body
-    class="bg-areia font-sans overflow-hidden text-oliva flex flex-col min-h-screen"
+<body class="bg-areia font-sans overflow-hidden text-oliva flex flex-col min-h-screen">
+  <!-- splash screen -->
+  <div id="splash-screen" class="fixed inset-0 z-50 flex items-center justify-center cursor-pointer">
+    <div id="splash-left"
+      class="absolute left-0 top-0 w-1/2 h-full bg-oliva transition-transform duration-1000 ease-in-out"></div>
+    <div id="splash-right"
+      class="absolute right-0 top-0 w-1/2 h-full bg-oliva transition-transform duration-1000 ease-in-out"></div>
+
+    <div id="splash-content"
+      class="relative z-10 text-center flex flex-col items-center transition-opacity duration-500">
+      <h1 class="text-6xl md:text-8xl lg:text-[140px] font-serif text-dourado mb-4 tracking-widest">
+        CAFÉ PELÔ
+      </h1>
+      <p class="text-offwhite text-sm md:text-base tracking-[0.3em] uppercase animate-pulse">
+        Clique para começar
+      </p>
+    </div>
+  </div>
+
+  <div id="home-content" class="opacity-0 transition-opacity duration-1000 ease-in flex flex-col w-full">
+    <div class="min-h-screen flex flex-col justify-between w-full pb-8 overflow-hidden">
+      <header class="w-full flex items-center justify-center pt-8 pb-4 md:pt-16 md:pb-8 shrink-0 px-4">
+        <div
+          class="animate-item flex items-center justify-center gap-2 sm:gap-4 md:gap-6 text-dourado tracking-[0.3em] text-[10px] md:text-sm uppercase w-full">
+          <span class="w-[80px] sm:min-w-[100px] md:min-w-[150px] text-right truncate">Salvador</span>
+          <img src="igreja.png" alt="Igreja Nosso Senhor do Bonfim / Pelourinho"
+            class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0" />
+          <span class="w-[80px] sm:min-w-[100px] md:min-w-[150px] text-left truncate">Bahia</span>
+        </div>
+      </header>
+
+      <div
+        class="flex-grow w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)_250px] xl:grid-cols-[300px_minmax(0,1fr)_300px] gap-8 md:gap-12 px-4 items-center py-6">
+        <div class="hidden lg:flex justify-start items-start order-1">
+          <aside
+            class="clip-vintage bg-oliva text-dourado p-5 md:p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[140px] md:min-w-[150px] w-fit h-fit animate-slide-right">
+            <h3 class="font-serif text-[10px] md:text-xs leading-[2] tracking-[0.2em] mt-2">
+              BRUNCH<br /><br />COFFEE<br /></BR>SUNSET
+            </h3>
+            <div class="my-5 md:my-6 w-8 h-[1px] bg-dourado/50"></div>
+            <img src="folha.png" alt="Ramo de Café" class="w-12 md:w-16 h-auto my-2 opacity-90" />
+            <p class="font-serif text-[10px] md:text-xs tracking-[0.2em] mt-5 mb-5 md:mt-6 md:mb-6">
+              EST.<br />2024
+            </p>
+            <span class="text-xl md:text-2xl leading-none">✧</span>
+          </aside>
+        </div>
+
+        <main class="flex flex-col items-center justify-center w-full order-1 lg:order-2">
+          <div class="flex flex-col items-center text-center w-full mb-6 md:mb-8">
+            <h1
+              class="animate-item text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[140px] font-serif text-oliva mb-4 md:mb-6 tracking-widest leading-none whitespace-nowrap">
+              CAFÉ PELÔ
+            </h1>
+            <div class="animate-item flex items-center justify-center w-full max-w-lg mx-auto mb-4 md:mb-6 opacity-80">
+              <div class="flex-1 h-[1px] bg-dourado"></div>
+              <div class="text-dourado px-4 text-lg md:text-xl leading-none">
+                ❖
+              </div>
+              <div class="flex-1 h-[1px] bg-dourado"></div>
+            </div>
+            <div
+              class="animate-item text-oliva tracking-[0.25em] md:tracking-[0.35em] text-[10px] sm:text-xs md:text-sm font-medium uppercase">
+              Brunch
+              <span class="text-dourado mx-1 md:mx-2 text-base md:text-lg align-middle">+</span>
+              Coffee
+              <span class="text-dourado mx-1 md:mx-2 text-base md:text-lg align-middle">+</span>
+              Sunset
+            </div>
+          </div>
+
+          <section class="w-full py-4 overflow-hidden relative z-10 shrink-0 rounded-lg">
+            <div class="animate-marquee gap-4 md:gap-6 px-3 flex">
+              <div class="flex gap-4 md:gap-6 items-center shrink-0">
+                <img src="1.jpeg"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="2.jpeg"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="3.jpeg"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="11.PNG"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="12.PNG"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+              </div>
+              <div class="flex gap-4 md:gap-6 items-center shrink-0">
+                <img src="1.jpeg"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="2.jpeg"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="3.jpeg"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="11.PNG"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+                <img src="12.PNG"
+                  class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity" />
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <div class="hidden lg:block w-full order-3"></div>
+      </div>
+
+      <div
+        class="w-full max-w-7xl mx-auto flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-6 gap-x-4 xl:gap-6 px-4 shrink-0 mt-4 md:mt-0">
+        <!-- brunch -->
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.3">
+            <path d="M12 2c-1.5 2-1.5 4 0 6M9 3c-1 2-1 3.5 0 5M15 3c1 2 1 3.5 0 5" />
+            <path d="M7 10c0 5 2 9 5 9s5-4 5-9" />
+            <path d="M4 21h16" />
+          </svg>
+          <div class="text-left leading-tight">
+            <p class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase">
+              Café Especial
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden sm:block w-px h-6 bg-oliva/20"></div>
+
+        <!-- café -->
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.3">
+            <path d="M3 15c0-5 4-9 9-9s9 4 9 9" />
+            <path d="M2 15h20" />
+            <path d="M6 15c0-3 2.5-5.5 6-5.5" />
+          </svg>
+          <div class="text-left leading-tight">
+            <p class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase">
+              Brunch All Day
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
+
+<div class="flex items-center gap-3">
+  <svg
+    class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
   >
-    <!-- splash screen -->
-    <div
-      id="splash-screen"
-      class="fixed inset-0 z-50 flex items-center justify-center cursor-pointer"
+    <path d="M12 4L20 20H4L12 4Z" />
+    <path d="M8 15h8" />
+    <circle cx="10" cy="11" r="0.8" />
+    <circle cx="14.5" cy="13.2" r="0.8" />
+    <circle cx="12" cy="16.2" r="0.8" />
+  </svg>
+  <div class="text-left leading-tight">
+    <p
+      class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
     >
-      <div
-        id="splash-left"
-        class="absolute left-0 top-0 w-1/2 h-full bg-oliva transition-transform duration-1000 ease-in-out"
-      ></div>
-      <div
-        id="splash-right"
-        class="absolute right-0 top-0 w-1/2 h-full bg-oliva transition-transform duration-1000 ease-in-out"
-      ></div>
+      Pizzas
+    </p>
+  </div>
+</div>
+        <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
 
-      <div
-        id="splash-content"
-        class="relative z-10 text-center flex flex-col items-center transition-opacity duration-500"
-      >
-        <h1
-          class="text-6xl md:text-8xl lg:text-[140px] font-serif text-dourado mb-4 tracking-widest"
-        >
-          CAFÉ PELÔ
-        </h1>
-        <p
-          class="text-offwhite text-sm md:text-base tracking-[0.3em] uppercase animate-pulse"
-        >
-          Clique para começar
-        </p>
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 14a6 6 0 0 1 12 0" />
+            <path d="M3 14h18" />
+            <path d="M12 3v3" />
+            <path d="M6.5 6.5l1.5 1.5" />
+            <path d="M17.5 6.5L16 8" />
+            <path d="M2 20h20" />
+            <path d="M5 17h2M10 17h4M17 17h2" />
+          </svg>
+          <div class="text-left leading-tight">
+            <p class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase">
+              Sunset
+            </p>
+          </div>
+        </div>
+        <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
+
+        <!-- historia -->
+        <div class="flex items-center gap-3">
+          <svg class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.3">
+            <path d="M12 2l2 4h-4l2-4z" />
+            <path d="M6 22V11M18 22V11M10 22V13M14 22V13" />
+            <path d="M4 22h16" />
+            <path d="M4 11h16" />
+          </svg>
+          <div class="text-left leading-tight">
+            <p class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase">
+              Cultura & História
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div
-      id="home-content"
-      class="opacity-0 transition-opacity duration-1000 ease-in flex flex-col w-full"
-    >
-      <div
-        class="min-h-screen flex flex-col justify-between w-full pb-8 overflow-hidden"
-      >
-        <header
-          class="w-full flex items-center justify-center pt-8 pb-4 md:pt-16 md:pb-8 shrink-0 px-4"
-        >
-          <div
-            class="animate-item flex items-center justify-center gap-2 sm:gap-4 md:gap-6 text-dourado tracking-[0.3em] text-[10px] md:text-sm uppercase w-full"
-          >
-            <span
-              class="w-[80px] sm:min-w-[100px] md:min-w-[150px] text-right truncate"
-              >Salvador</span
-            >
-            <img
-              src="igreja.png"
-              alt="Igreja Nosso Senhor do Bonfim / Pelourinho"
-              class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0"
-            />
-            <span
-              class="w-[80px] sm:min-w-[100px] md:min-w-[150px] text-left truncate"
-              >Bahia</span
-            >
-          </div>
-        </header>
-
-        <div
-          class="flex-grow w-full max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[250px_minmax(0,1fr)_250px] xl:grid-cols-[300px_minmax(0,1fr)_300px] gap-8 md:gap-12 px-4 items-center py-6"
-        >
-          <div class="hidden lg:flex justify-start items-start order-1">
-            <aside
-              class="clip-vintage bg-oliva text-dourado p-5 md:p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[140px] md:min-w-[150px] w-fit h-fit animate-slide-right"
-            >
-              <h3
-                class="font-serif text-[10px] md:text-xs leading-[2] tracking-[0.2em] mt-2"
-              >
-                BRUNCH.<br /><br />BAHIAN<br />SOUL.
-              </h3>
-              <div class="my-5 md:my-6 w-8 h-[1px] bg-dourado/50"></div>
-              <img
-                src="folha.png"
-                alt="Ramo de Café"
-                class="w-12 md:w-16 h-auto my-2 opacity-90"
-              />
-              <p
-                class="font-serif text-[10px] md:text-xs tracking-[0.2em] mt-5 mb-5 md:mt-6 md:mb-6"
-              >
-                EST.<br />2024
-              </p>
-              <span class="text-xl md:text-2xl leading-none">✧</span>
-            </aside>
-          </div>
-
-          <main
-            class="flex flex-col items-center justify-center w-full order-1 lg:order-2"
-          >
-            <div
-              class="flex flex-col items-center text-center w-full mb-6 md:mb-8"
-            >
-              <h1
-                class="animate-item text-5xl sm:text-7xl md:text-8xl lg:text-[100px] xl:text-[140px] font-serif text-oliva mb-4 md:mb-6 tracking-widest leading-none whitespace-nowrap"
-              >
-                CAFÉ PELÔ
-              </h1>
-              <div
-                class="animate-item flex items-center justify-center w-full max-w-lg mx-auto mb-4 md:mb-6 opacity-80"
-              >
-                <div class="flex-1 h-[1px] bg-dourado"></div>
-                <div class="text-dourado px-4 text-lg md:text-xl leading-none">
-                  ❖
-                </div>
-                <div class="flex-1 h-[1px] bg-dourado"></div>
-              </div>
-              <div
-                class="animate-item text-oliva tracking-[0.25em] md:tracking-[0.35em] text-[10px] sm:text-xs md:text-sm font-medium uppercase"
-              >
-                Brunch
-                <span
-                  class="text-dourado mx-1 md:mx-2 text-base md:text-lg align-middle"
-                  >+</span
-                >
-                Coffee
-                <span
-                  class="text-dourado mx-1 md:mx-2 text-base md:text-lg align-middle"
-                  >+</span
-                >
-                Bahia
-              </div>
-            </div>
-
-            <section
-              class="w-full py-4 overflow-hidden relative z-10 shrink-0 rounded-lg"
-            >
-              <div class="animate-marquee gap-4 md:gap-6 px-3 flex">
-                <div class="flex gap-4 md:gap-6 items-center shrink-0">
-                  <img
-                    src="1.jpeg"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="2.jpeg"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="3.jpeg"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="11.PNG"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="12.PNG"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-                <div class="flex gap-4 md:gap-6 items-center shrink-0">
-                  <img
-                    src="1.jpeg"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="2.jpeg"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="3.jpeg"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="11.PNG"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <img
-                    src="12.PNG"
-                    class="h-24 sm:h-32 md:h-40 xl:h-56 w-auto object-cover rounded-md shadow-sm opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-              </div>
-            </section>
-          </main>
-
-          <div class="hidden lg:block w-full order-3"></div>
-        </div>
-
-        <div
-          class="w-full max-w-7xl mx-auto flex flex-wrap xl:flex-nowrap items-center justify-center gap-y-6 gap-x-4 xl:gap-6 px-4 shrink-0 mt-4 md:mt-0"
-        >
-          <div class="flex items-center gap-3">
-            <svg
-              class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.3"
-            >
-              <path
-                d="M12 2c-1.5 2-1.5 4 0 6M9 3c-1 2-1 3.5 0 5M15 3c1 2 1 3.5 0 5"
-              />
-              <path d="M7 10c0 5 2 9 5 9s5-4 5-9" />
-              <path d="M4 21h16" />
-            </svg>
-            <div class="text-left leading-tight">
-              <p
-                class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
-              >
-                Café Especial
-              </p>
-            </div>
-          </div>
-          <div class="hidden sm:block w-px h-6 bg-oliva/20"></div>
-
-          <div class="flex items-center gap-3">
-            <svg
-              class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.3"
-            >
-              <path d="M3 15c0-5 4-9 9-9s9 4 9 9" />
-              <path d="M2 15h20" />
-              <path d="M6 15c0-3 2.5-5.5 6-5.5" />
-            </svg>
-            <div class="text-left leading-tight">
-              <p
-                class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
-              >
-                Brunch All Day
-              </p>
-            </div>
-          </div>
-          <div class="hidden md:block w-px h-6 bg-oliva/20"></div>
-
-          <div class="flex items-center gap-3">
-            <svg
-              class="w-5 h-5 md:w-6 md:h-6 text-oliva shrink-0"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.3"
-            >
-              <path d="M12 2l2 4h-4l2-4z" />
-              <path d="M6 22V11M18 22V11M10 22V13M14 22V13" />
-              <path d="M4 22h16" />
-              <path d="M4 11h16" />
-            </svg>
-            <div class="text-left leading-tight">
-              <p
-                class="font-serif text-[9px] md:text-[10px] tracking-[0.15em] text-oliva uppercase"
-              >
-                Cultura & História
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
     <main class="w-full bg-offwhite py-24 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col gap-24 md:gap-32">
-          
-          <section
-            class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16"
-          >
-            <div class="w-full md:w-1/2 scroll-anim fade-in-up">
-              <img
-                src="2.jpeg"
-                alt="O Espaço"
-                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
-              />
-            </div>
-            <div
-              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-right"
-            >
-              <p
-                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
-              >
-                Ambiente
-              </p>
-              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
-                O Espaço
-              </h2>
-              <p class="text-oliva/80 leading-relaxed font-light mb-6">
-                Um casarão restaurado que respira a história de Salvador.
-                Mesclamos o conforto contemporâneo com elementos rústicos e
-                originais da arquitetura baiana. Cada canto foi pensado para ser
-                um refúgio acolhedor em meio à vibração do Pelô.
-              </p>
-            </div>
-          </section>
+      <div class="max-w-6xl mx-auto px-6 flex flex-col gap-24 md:gap-32">
 
-          <section
-            class="flex flex-col-reverse md:flex-row-reverse items-center gap-10 md:gap-16"
-          >
-            <div
-              class="w-full md:w-1/2 scroll-anim fade-in-up"
-              style="transition-delay: 0.2s"
-            >
-              <img
-                src="10.PNG"
-                alt="A Região"
-                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
-              />
-            </div>
-            <div
-              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-left"
-            >
-              <p
-                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
-              >
-                Localização
-              </p>
-              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
-                A Região
-              </h2>
-              <p class="text-oliva/80 leading-relaxed font-light mb-6">
-                Situado no coração do centro histórico, o Café Pelô está rodeado
-                por cores, ritmos e ladeiras que contam a história do Brasil. Um
-                ponto de encontro estratégico para quem explora as ruas de pedra
-                e a magia do Pelourinho.
-              </p>
-            </div>
-          </section>
-
-          <section
-            class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16"
-          >
-            <div class="w-full md:w-1/2 scroll-anim fade-in-up">
-              <img
-                src="9.PNG"
-                alt="Turismo"
-                class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia"
-              />
-            </div>
-            <div
-              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-right"
-            >
-              <p
-                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
-              >
-                Atração
-              </p>
-              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
-                O Turismo
-              </h2>
-              <p class="text-oliva/80 leading-relaxed font-light mb-6">
-                Salvador atrai milhões de visitantes anualmente em busca de
-                autenticidade. Nosso cardápio oferece aos turistas a experiência
-                do verdadeiro café especial aliado a releituras de clássicos da
-                culinária regional, elevando a experiência turística.
-              </p>
-            </div>
-          </section>
-
-          <section
-            class="flex flex-col-reverse md:flex-row-reverse items-center gap-10 md:gap-16"
-          >
-            <div
-              class="w-full md:w-1/2 scroll-anim fade-in-up"
-              style="transition-delay: 0.2s"
-            >
-              </div>
-            <div
-              class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-left"
-            >
-              <p
-                class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3"
-              >
-                Mercado
-              </p>
-              <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
-                Potencial de Consumo
-              </h2>
-              <p class="text-oliva/80 leading-relaxed font-light mb-6">
-                Com um fluxo constante de pessoas e a carência de opções que
-                unam café de alta qualidade e infraestrutura premium na região,
-                o Café Pelô se posiciona para capturar tanto o turista disposto
-                a gastar em experiências, quanto o soteropolitano em busca de um
-                bom brunch.
-              </p>
-            </div>
-          </section>
-          
-        </div>
-      </main>
-
-      <!-- investimento -->
-      <section
-        class="w-full bg-oliva py-16 md:py-24 px-4 md:px-6 text-center text-offwhite border-t-4 border-dourado flex flex-col gap-16 md:gap-20 overflow-hidden"
-      >
-        <div class="max-w-6xl mx-auto w-full">
-          <div class="scroll-anim fade-in-up">
-            <p
-              class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-4"
-            >
-              Investimento & Retorno
+        <section class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+          <div class="w-full md:w-1/2 scroll-anim fade-in-up">
+            <img src="2.jpeg" alt="O Espaço"
+              class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia" />
+          </div>
+          <div class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-right">
+            <p class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3">
+              Ambiente
             </p>
-            <h2
-              class="text-4xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-16"
-            >
-              KPIs do Projeto
+            <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+              O Espaço
             </h2>
+            <p class="text-oliva/80 leading-relaxed font-light mb-6">
+              Um casarão restaurado que respira a história de Salvador.
+              Mesclamos o conforto contemporâneo com elementos rústicos e
+              originais da arquitetura baiana. Cada canto foi pensado para ser
+              um refúgio acolhedor em meio à vibração do Pelô.
+            </p>
+          </div>
+        </section>
+
+        <section class="flex flex-col-reverse md:flex-row-reverse items-center gap-10 md:gap-16">
+          <div class="w-full md:w-1/2 scroll-anim fade-in-up" style="transition-delay: 0.2s">
+            <img src="10.PNG" alt="A Região"
+              class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia" />
+          </div>
+          <div class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-left">
+            <p class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3">
+              Localização
+            </p>
+            <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+              A Região
+            </h2>
+            <p class="text-oliva/80 leading-relaxed font-light mb-6">
+              Situado no coração do centro histórico, o Café Pelô está rodeado
+              por cores, ritmos e ladeiras que contam a história do Brasil. Um
+              ponto de encontro estratégico para quem explora as ruas de pedra
+              e a magia do Pelourinho.
+            </p>
+          </div>
+        </section>
+
+        <section class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+          <div class="w-full md:w-1/2 scroll-anim fade-in-up">
+            <img src="9.PNG" alt="Turismo"
+              class="w-full aspect-[4/3] object-cover rounded-sm shadow-xl clip-vintage border-4 border-areia" />
+          </div>
+          <div class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-right">
+            <p class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3">
+              Atração
+            </p>
+            <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+              O Turismo
+            </h2>
+            <p class="text-oliva/80 leading-relaxed font-light mb-6">
+              Salvador atrai milhões de visitantes anualmente em busca de
+              autenticidade. Nosso cardápio oferece aos turistas a experiência
+              do verdadeiro café especial aliado a releituras de clássicos da
+              culinária regional, elevando a experiência turística.
+            </p>
+          </div>
+        </section>
+
+        <section class="flex flex-col-reverse md:flex-row-reverse items-center gap-10 md:gap-16">
+          <div class="w-full md:w-1/2 scroll-anim fade-in-up" style="transition-delay: 0.2s">
+          </div>
+          <div class="w-full md:w-1/2 flex flex-col justify-center scroll-anim slide-in-left">
+            <p class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-3">
+              Mercado
+            </p>
+            <h2 class="text-4xl lg:text-5xl font-serif text-oliva mb-6">
+              Potencial de Consumo
+            </h2>
+            <p class="text-oliva/80 leading-relaxed font-light mb-6">
+              Com um fluxo constante de pessoas e a carência de opções que
+              unam café de alta qualidade e infraestrutura premium na região,
+              o Café Pelô se posiciona para capturar tanto o turista disposto
+              a gastar em experiências, quanto o soteropolitano em busca de um
+              bom brunch.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- investimento -->
+    <section
+      class="w-full bg-oliva py-16 md:py-24 px-4 md:px-6 text-center text-offwhite border-t-4 border-dourado flex flex-col gap-16 md:gap-20 overflow-hidden">
+      <div class="max-w-6xl mx-auto w-full">
+        <div class="scroll-anim fade-in-up">
+          <p class="text-dourado tracking-[0.3em] text-xs font-bold uppercase mb-4">
+            Investimento & Retorno
+          </p>
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-offwhite mb-16">
+            KPIs do Projeto
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+          <div
+            class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors">
+            <span class="text-4xl font-serif text-dourado mb-3">R$ 67,14</span>
+            <span class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center">Ticket Médio
+              Est.</span>
           </div>
 
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24"
-          >
-            <div
-              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-            >
-              <span class="text-4xl font-serif text-dourado mb-3"
-                >R$ 67,14</span
-              >
-              <span
-                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
-                >Ticket Médio Est.</span
-              >
-            </div>
-
-            <div
-              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-              style="transition-delay: 0.2s"
-            >
-              <span class="text-4xl font-serif text-dourado mb-3">44</span>
-              <span
-                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
-                >Clientes / Dia</span
-              >
-            </div>
-
-            <div
-              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-              style="transition-delay: 0.4s"
-            >
-              <span class="text-3xl font-serif text-dourado mb-3">28-32%</span>
-              <span
-                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
-                >CMV Target</span
-              >
-            </div>
-
-            <div
-              class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
-              style="transition-delay: 0.6s"
-            >
-              <span class="text-4xl font-serif text-dourado mb-3">39</span>
-              <span
-                class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center"
-                >Payback (Meses)</span
-              >
-            </div>
+            class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            style="transition-delay: 0.2s">
+            <span class="text-4xl font-serif text-dourado mb-3">44</span>
+            <span class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center">Clientes /
+              Dia</span>
           </div>
 
-          <div class="scroll-anim slide-in-left text-left mb-24">
-            <h3
-              class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold"
-            >
-              ❖ Demonstrativo de Receita Projetada (5 Anos)
-            </h3>
-            <p class="text-offwhite/70 text-sm font-light mb-6">
-              Projeção financeira baseada na curva de maturação do tráfego
-              turístico e corporativo do Pelourinho, considerando os ajustes
-              inflacionários e estratégias de upsell no cardápio de restobar.
-            </p>
-            <div
-              class="overflow-x-auto border border-dourado/20 rounded-sm bg-white/5 w-full"
-            >
-              <table
-                class="w-full text-left font-sans text-sm border-collapse min-w-max"
-              >
-                <thead>
-                  <tr
-                    class="border-b border-dourado/20 bg-white/5 text-dourado uppercase tracking-widest text-[11px] whitespace-nowrap"
-                  >
-                    <th class="p-4">Categoria / Métrica</th>
-                    <th class="p-4">Ano 1</th>
-                    <th class="p-4">Ano 2</th>
-                    <th class="p-4">Ano 3</th>
-                    <th class="p-4">Ano 4</th>
-                    <th class="p-4">Ano 5</th>
-                  </tr>
-                </thead>
-                <tbody
-                  class="divide-y divide-dourado/10 text-offwhite/90 font-light whitespace-nowrap"
-                >
-                  <tr class="hover:bg-white/5 transition-colors">
-                    <td class="p-4 font-normal text-offwhite">
-                      Média de Cliente / Dia
-                    </td>
-                    <td class="p-4">44</td>
-                    <td class="p-4">68</td>
-                    <td class="p-4">102</td>
-                    <td class="p-4">116</td>
-                    <td class="p-4 font-semibold text-dourado">128</td>
-                  </tr>
-                  <tr class="hover:bg-white/5 transition-colors">
-                    <td class="p-4 font-normal text-offwhite">
-                      Média de Cliente / Mês
-                    </td>
-                    <td class="p-4">1.333</td>
-                    <td class="p-4">2.032</td>
-                    <td class="p-4">3.062</td>
-                    <td class="p-4">3.476</td>
-                    <td class="p-4">3.833</td>
-                  </tr>
-                  <tr class="hover:bg-white/5 transition-colors">
-                    <td class="p-4 font-normal text-offwhite">
-                      Volume Anual de Cliente
-                    </td>
-                    <td class="p-4">11.997</td>
-                    <td class="p-4">24.384</td>
-                    <td class="p-4">36.747</td>
-                    <td class="p-4">41.717</td>
-                    <td class="p-4">45.993</td>
-                  </tr>
-                  <tr class="hover:bg-white/5 transition-colors">
-                    <td class="p-4 font-normal text-offwhite">
-                      Ticket Médio Estimado
-                    </td>
-                    <td class="p-4">R$ 67,14</td>
-                    <td class="p-4">R$ 70,50</td>
-                    <td class="p-4">R$ 74,03</td>
-                    <td class="p-4">R$ 77,73</td>
-                    <td class="p-4">R$ 81,61</td>
-                  </tr>
-                  <tr class="bg-white/5 font-normal text-offwhite">
-                    <td class="p-4 font-medium text-dourado">Faturamento</td>
-                    <td class="p-4">R$ 561.817,44</td>
-                    <td class="p-4">R$ 1.719.041,04</td>
-                    <td class="p-4">R$ 2.720.183,23</td>
-                    <td class="p-4">R$ 3.242.531,48</td>
-                    <td class="p-4 text-dourado font-bold">R$ 3.753.635,51</td>
-                  </tr>
-                  <tr class="hover:bg-white/5 transition-colors">
-                    <td class="p-4 font-medium text-dourado">Lucro Líquido</td>
-                    <td class="p-4 text-red-400 font-medium">-R$ 244.474,41</td>
-                    <td class="p-4">R$ 104.525,91</td>
-                    <td class="p-4">R$ 556.851,08</td>
-                    <td class="p-4">R$ 794.589,96</td>
-                    <td class="p-4 text-dourado font-bold">R$ 1.072.293,44</td>
-                  </tr>
-                  <tr class="bg-dourado/5 text-offwhite">
-                    <td class="p-4 font-medium text-dourado">
-                      Margem Líquida (%)
-                    </td>
-                    <td class="p-4">-</td>
-                    <td class="p-4">6%</td>
-                    <td class="p-4">20%</td>
-                    <td class="p-4">25%</td>
-                    <td class="p-4 text-dourado font-bold">29%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div
+            class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            style="transition-delay: 0.4s">
+            <span class="text-3xl font-serif text-dourado mb-3">28-32%</span>
+            <span class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center">CMV Target</span>
           </div>
 
-          <div class="scroll-anim slide-in-right text-left mb-24">
-            <h3
-              class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold"
-            >
-              ❖ Usos & Fontes (Alocação do Capital Inicial)
-            </h3>
-            <p class="text-offwhite/70 text-sm font-light mb-8">
-              Distribuição do aporte para viabilização e abertura da unidade
-              física. O foco principal reside na adequação estrutural e
-              arquitetônica do casarão histórico.
-            </p>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              <div
-                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
-              >
-                <div>
-                  <span class="text-2xl font-serif text-dourado block mb-1"
-                    >32%</span
-                  >
-                  <span
-                    class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium"
-                    >Obras e Restauro</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto"
-                >
-                  <div class="bg-dourado h-full w-[32%]"></div>
-                </div>
-              </div>
+          <div
+            class="scroll-anim fade-in-up flex flex-col items-center justify-center p-8 border border-dourado/20 rounded-sm bg-white/5 hover:bg-white/10 transition-colors"
+            style="transition-delay: 0.6s">
+            <span class="text-4xl font-serif text-dourado mb-3">39</span>
+            <span class="text-xs tracking-[0.15em] uppercase font-light text-offwhite/70 text-center">Payback
+              (Meses)</span>
+          </div>
+        </div>
 
-              <div
-                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
-              >
-                <div>
-                  <span class="text-2xl font-serif text-dourado block mb-1"
-                    >19%</span
-                  >
-                  <span
-                    class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium"
-                    >Equipamentos</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto"
-                >
-                  <div class="bg-dourado h-full w-[19%]"></div>
-                </div>
-              </div>
+        <div class="scroll-anim slide-in-left text-left mb-24">
+          <h3
+            class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold">
+            ❖ Demonstrativo de Receita Projetada (5 Anos)
+          </h3>
+          <p class="text-offwhite/70 text-sm font-light mb-6">
+            Projeção financeira baseada na curva de maturação do tráfego
+            turístico e corporativo do Pelourinho, considerando os ajustes
+            inflacionários e estratégias de upsell no cardápio de restobar.
+          </p>
+          <div class="overflow-x-auto border border-dourado/20 rounded-sm bg-white/5 w-full">
+            <table class="w-full text-left font-sans text-sm border-collapse min-w-max">
+              <thead>
+                <tr
+                  class="border-b border-dourado/20 bg-white/5 text-dourado uppercase tracking-widest text-[11px] whitespace-nowrap">
+                  <th class="p-4">Categoria / Métrica</th>
+                  <th class="p-4">Ano 1</th>
+                  <th class="p-4">Ano 2</th>
+                  <th class="p-4">Ano 3</th>
+                  <th class="p-4">Ano 4</th>
+                  <th class="p-4">Ano 5</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-dourado/10 text-offwhite/90 font-light whitespace-nowrap">
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-normal text-offwhite">
+                    Média de Cliente / Dia
+                  </td>
+                  <td class="p-4">44</td>
+                  <td class="p-4">68</td>
+                  <td class="p-4">102</td>
+                  <td class="p-4">116</td>
+                  <td class="p-4 font-semibold text-dourado">128</td>
+                </tr>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-normal text-offwhite">
+                    Média de Cliente / Mês
+                  </td>
+                  <td class="p-4">1.333</td>
+                  <td class="p-4">2.032</td>
+                  <td class="p-4">3.062</td>
+                  <td class="p-4">3.476</td>
+                  <td class="p-4">3.833</td>
+                </tr>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-normal text-offwhite">
+                    Volume Anual de Cliente
+                  </td>
+                  <td class="p-4">11.997</td>
+                  <td class="p-4">24.384</td>
+                  <td class="p-4">36.747</td>
+                  <td class="p-4">41.717</td>
+                  <td class="p-4">45.993</td>
+                </tr>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-normal text-offwhite">
+                    Ticket Médio Estimado
+                  </td>
+                  <td class="p-4">R$ 67,14</td>
+                  <td class="p-4">R$ 70,50</td>
+                  <td class="p-4">R$ 74,03</td>
+                  <td class="p-4">R$ 77,73</td>
+                  <td class="p-4">R$ 81,61</td>
+                </tr>
+                <tr class="bg-white/5 font-normal text-offwhite">
+                  <td class="p-4 font-medium text-dourado">Faturamento</td>
+                  <td class="p-4">R$ 561.817,44</td>
+                  <td class="p-4">R$ 1.719.041,04</td>
+                  <td class="p-4">R$ 2.720.183,23</td>
+                  <td class="p-4">R$ 3.242.531,48</td>
+                  <td class="p-4 text-dourado font-bold">R$ 3.753.635,51</td>
+                </tr>
+                <tr class="hover:bg-white/5 transition-colors">
+                  <td class="p-4 font-medium text-dourado">Lucro Líquido</td>
+                  <td class="p-4 text-red-400 font-medium">-R$ 244.474,41</td>
+                  <td class="p-4">R$ 104.525,91</td>
+                  <td class="p-4">R$ 556.851,08</td>
+                  <td class="p-4">R$ 794.589,96</td>
+                  <td class="p-4 text-dourado font-bold">R$ 1.072.293,44</td>
+                </tr>
+                <tr class="bg-dourado/5 text-offwhite">
+                  <td class="p-4 font-medium text-dourado">
+                    Margem Líquida (%)
+                  </td>
+                  <td class="p-4">-</td>
+                  <td class="p-4">6%</td>
+                  <td class="p-4">20%</td>
+                  <td class="p-4">25%</td>
+                  <td class="p-4 text-dourado font-bold">29%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-              <div
-                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
-              >
-                <div>
-                  <span class="text-2xl font-serif text-dourado block mb-1"
-                    >14%</span
-                  >
-                  <span
-                    class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium"
-                    >Móveis & Decor</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto"
-                >
-                  <div class="bg-dourado h-full w-[14%]"></div>
-                </div>
+        <div class="scroll-anim slide-in-right text-left mb-24">
+          <h3
+            class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold">
+            ❖ Usos & Fontes (Alocação do Capital Inicial)
+          </h3>
+          <p class="text-offwhite/70 text-sm font-light mb-8">
+            Distribuição do aporte para viabilização e abertura da unidade
+            física. O foco principal reside na adequação estrutural e
+            arquitetônica do casarão histórico.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between">
+              <div>
+                <span class="text-2xl font-serif text-dourado block mb-1">32%</span>
+                <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Obras e
+                  Restauro</span>
               </div>
-
-              <div
-                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
-              >
-                <div>
-                  <span class="text-2xl font-serif text-dourado block mb-1"
-                    >26%</span
-                  >
-                  <span
-                    class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium"
-                    >Capital de Giro</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto"
-                >
-                  <div class="bg-dourado h-full w-[26%]"></div>
-                </div>
-              </div>
-
-              <div
-                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
-              >
-                <div>
-                  <span class="text-2xl font-serif text-dourado block mb-1"
-                    >6%</span
-                  >
-                  <span
-                    class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium"
-                    >Marketing & Mídia</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto"
-                >
-                  <div class="bg-dourado h-full w-[6%]"></div>
-                </div>
-              </div>
-
-              <div
-                class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between"
-              >
-                <div>
-                  <span class="text-2xl font-serif text-dourado block mb-1"
-                    >3%</span
-                  >
-                  <span
-                    class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium"
-                    >Outros</span
-                  >
-                </div>
-                <div
-                  class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto"
-                >
-                  <div class="bg-dourado h-full w-[3%]"></div>
-                </div>
+              <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                <div class="bg-dourado h-full w-[32%]"></div>
               </div>
             </div>
-          </div>
 
-          <div class="scroll-anim slide-in-left text-left">
-            <h3
-              class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold"
-            >
-              ❖ Rodada de Captação & Valuation
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div
-                class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center"
-              >
+            <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between">
+              <div>
+                <span class="text-2xl font-serif text-dourado block mb-1">19%</span>
                 <span
-                  class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2"
-                  >Oferta (ASK)</span
-                >
-                <span class="text-3xl font-serif text-offwhite font-semibold"
-                  >R$ 786.000</span
-                >
-                <p class="text-xs text-offwhite/60 mt-3 font-light">
-                  Destinado integralmente ao plano de expansão física e
-                  abertura.
-                </p>
+                  class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Equipamentos</span>
               </div>
-              <div
-                class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center"
-              >
-                <span
-                  class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2"
-                  >Equity Disponibilizado</span
-                >
-                <span class="text-3xl font-serif text-offwhite font-semibold"
-                  >50%</span
-                >
-                <p class="text-xs text-offwhite/60 mt-3 font-light">
-                  Participação societária corporativa direta na operação do
-                  restobar.
-                </p>
+              <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                <div class="bg-dourado h-full w-[19%]"></div>
               </div>
-              <div
-                class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center"
-              >
-                <span
-                  class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2"
-                  >Valuation Post-Money</span
-                >
-                <span class="text-3xl font-serif text-dourado font-bold"
-                  >R$ 2.709.675</span
-                >
-                <p class="text-xs text-offwhite/60 mt-3 font-light">
-                  Calculado com base no Payback estimado de 39 meses do negócio.
-                </p>
+            </div>
+
+            <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between">
+              <div>
+                <span class="text-2xl font-serif text-dourado block mb-1">14%</span>
+                <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Móveis &
+                  Decor</span>
+              </div>
+              <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                <div class="bg-dourado h-full w-[14%]"></div>
+              </div>
+            </div>
+
+            <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between">
+              <div>
+                <span class="text-2xl font-serif text-dourado block mb-1">26%</span>
+                <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Capital de
+                  Giro</span>
+              </div>
+              <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                <div class="bg-dourado h-full w-[26%]"></div>
+              </div>
+            </div>
+
+            <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between">
+              <div>
+                <span class="text-2xl font-serif text-dourado block mb-1">6%</span>
+                <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Marketing &
+                  Mídia</span>
+              </div>
+              <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                <div class="bg-dourado h-full w-[6%]"></div>
+              </div>
+            </div>
+
+            <div class="border border-dourado/20 p-5 rounded-sm bg-white/5 text-center flex flex-col justify-between">
+              <div>
+                <span class="text-2xl font-serif text-dourado block mb-1">3%</span>
+                <span class="text-[10px] tracking-wider uppercase text-offwhite/60 block mb-3 font-medium">Outros</span>
+              </div>
+              <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mt-auto">
+                <div class="bg-dourado h-full w-[3%]"></div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <footer
-        class="w-full flex flex-col items-center justify-center py-6 sm:py-8 px-4 text-center bg-areia max-h-[80px]"
-      >
-        <div
-          class="w-full max-w-4xl mx-auto text-[11px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] leading-relaxed text-oliva opacity-80"
-        >
-          © 2026 CAFÉ PELÔ. Todos os direitos reservados.
+        <div class="scroll-anim slide-in-left text-left">
+          <h3
+            class="font-serif text-xl md:text-2xl text-dourado mb-6 border-b border-dourado/20 pb-2 uppercase tracking-wider font-bold">
+            ❖ Rodada de Captação & Valuation
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div
+              class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center">
+              <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2">Oferta (ASK)</span>
+              <span class="text-3xl font-serif text-offwhite font-semibold">R$ 786.000</span>
+              <p class="text-xs text-offwhite/60 mt-3 font-light">
+                Destinado integralmente ao plano de expansão física e
+                abertura.
+              </p>
+            </div>
+            <div
+              class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center">
+              <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2">Equity
+                Disponibilizado</span>
+              <span class="text-3xl font-serif text-offwhite font-semibold">50%</span>
+              <p class="text-xs text-offwhite/60 mt-3 font-light">
+                Participação societária corporativa direta na operação do
+                restobar.
+              </p>
+            </div>
+            <div
+              class="border border-dourado/30 p-8 rounded-sm bg-white/5 text-center hover:border-dourado transition-colors flex flex-col justify-center">
+              <span class="text-[10px] tracking-[0.2em] uppercase font-bold text-dourado block mb-2">Valuation
+                Post-Money</span>
+              <span class="text-3xl font-serif text-dourado font-bold">R$ 2.709.675</span>
+              <p class="text-xs text-offwhite/60 mt-3 font-light">
+                Calculado com base no Payback estimado de 39 meses do negócio.
+              </p>
+            </div>
+          </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <footer
+      class="w-full flex flex-col items-center justify-center py-6 sm:py-8 px-4 text-center bg-areia max-h-[80px]">
+      <div
+        class="w-full max-w-4xl mx-auto text-[11px] sm:text-xs tracking-[0.15em] sm:tracking-[0.2em] leading-relaxed text-oliva opacity-80">
+        © 2026 CAFÉ PELÔ. Todos os direitos reservados.
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
