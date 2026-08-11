@@ -1,0 +1,16 @@
+        <div class="hidden lg:flex justify-start items-start order-1">
+          <aside
+            class="clip-vintage bg-oliva text-dourado p-5 md:p-6 flex flex-col items-center text-center border border-dourado/20 shadow-lg min-w-[140px] md:min-w-[150px] w-fit h-fit animate-slide-right">
+            <h3 class="font-serif text-[10px] md:text-xs leading-[2] tracking-[0.2em] mt-2">
+              BRUNCH<br /><br />COFFEE<br /></BR>SUNSET
+            </h3>
+            <div class="my-5 md:my-6 w-8 h-[1px] bg-dourado/50"></div>
+            <img src="folha.png" alt="Ramo de Café" class="w-12 md:w-16 h-auto my-2 opacity-90" />
+            <p class="font-serif text-[10px] md:text-xs tracking-[0.2em] mt-5 mb-5 md:mt-6 md:mb-6">
+              EST.<br />2024
+            </p>
+            <span class="text-xl md:text-2xl leading-none">✧</span>
+          </aside>
+        </div> 
+
+-------------------------------
